@@ -382,7 +382,7 @@ CBOOL__PROTO(prolog_set_trace_active)
   ERR__FUNCTOR("set_trace_active", 1);
   DEREF(X(0),X(0));
   if(!IsInteger(X(0)))
-    BUILTIN_ERROR(TYPE_ERROR(INTEGER),X(0),1);
+    BUILTIN_ERROR(ERR_type_error(integer),X(0),1);
   profile_trace=TaggedToIntmach(X(0));
   return TRUE;
 #else
@@ -409,7 +409,7 @@ CBOOL__PROTO(prolog_set_hooks_active)
   ERR__FUNCTOR("set_hooks_active", 1);
   DEREF(X(0),X(0));
   if(!IsInteger(X(0)))
-    BUILTIN_ERROR(TYPE_ERROR(INTEGER),X(0),1);
+    BUILTIN_ERROR(ERR_type_error(integer),X(0),1);
   profile_hooks=TaggedToIntmach(X(0));
   return TRUE;
 #else
