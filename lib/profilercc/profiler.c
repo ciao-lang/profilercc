@@ -1003,7 +1003,7 @@ void profile_flat_dump(prof_frame_t *frame, FILE * streamfile)
 /*     SCuts     =Number of cuts that do not remove nodes. */
     fprintf(streamfile, "/*\n Flat profiling report:");
     fprintf(streamfile, FORMAT_SEPARATOR_2);
-    n=SwitchSize(*predicates_location);
+    n=HASHTAB_SIZE(*predicates_location);
     prof=(profile_currents_t *)checkalloc(n*sizeof(profile_currents_t));
     for (j=n-1;j>=0;--j) {
       /* Find how many preds. we have called */
