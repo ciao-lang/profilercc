@@ -983,8 +983,8 @@ void profile_flat_dump(prof_frame_t *frame, FILE * streamfile)
 {
   int j, k, l, n;
   long int i, realsize=0, realsize_oh=0;
-  sw_on_key_t *table=(sw_on_key_t *)*predicates_location;
-  sw_on_key_node_t *keyval;
+  hashtab_t *table=(hashtab_t *)*predicates_location;
+  hashtab_node_t *keyval;
   definition_t *d;
   int (*compare_func)(const void *, const void *);
   profile_currents_t *prof;
